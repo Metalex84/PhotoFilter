@@ -17,7 +17,7 @@
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <exec.mainClass>Main</exec.mainClass>
+        <exec.mainClass>PhotoFilterGUI</exec.mainClass>
     </properties>
     
     <build>
@@ -43,23 +43,10 @@
                 <artifactId>exec-maven-plugin</artifactId>
                 <version>3.1.0</version>
                 <configuration>
-                    <mainClass>Main</mainClass>
+                    <mainClass>PhotoFilterGUI</mainClass>
                     <cleanupDaemonThreads>false</cleanupDaemonThreads>
                 </configuration>
-                <executions>
-                    <execution>
-                        <id>run-with-image</id>
-                        <goals>
-                            <goal>java</goal>
-                        </goals>
-                        <configuration>
-                            <mainClass>Main</mainClass>
-                            <arguments>
-                                <argument>${image.file}</argument>
-                            </arguments>
-                        </configuration>
-                    </execution>
-                </executions>
+
             </plugin>
             
             <!-- JAR Plugin for creating executable JAR -->
@@ -70,7 +57,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>Main</mainClass>
+                            <mainClass>PhotoFilterGUI</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
